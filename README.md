@@ -90,6 +90,9 @@ docker-compose exec mysql bash
 ```bash
 docker-compose exec mysql mysqldump -u wordpress -p wordpress_db > backup.sql
 ```
+docker cp "C:\Users\renar\Documents\Projets\micehlneshan\michel_wordpress_backup_20250803_160031.sql" michel_mysql:/michel_wordpress_backup.sql
+
+docker-compose exec -T michel_mysql mysql -u wordpress -p WORDPRESS_DB_USER: wordpress < michel_wordpress_backup.sql
 
 ## Personnalisation
 
